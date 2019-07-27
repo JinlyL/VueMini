@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="app">
+			{{txt}}</br>
+			<input type="text" v-model="txt" />
+			<div v-html="html"></div>
+			<button type="button" @click="btnfn">按钮</button>
+		</div>
+	</body>
+	<script src="Compile.js" charset="UTF-8"></script>
+	<script src="MyVue.js" charset="UTF-8"></script>
+	<script>
+		new MyVue({
+			el:"#app",
+			data:{
+				txt:"hello,ljl",
+				html:"<header>My Vue</header>"
+			},
+			methods:{
+				btnfn(){
+					alert("I am button")
+				}
+			}
+		})
+	</script>
+</html>
